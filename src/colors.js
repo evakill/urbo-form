@@ -1,0 +1,12 @@
+const BLUE="#084C61"
+const TEAL="#32A287"
+const GREEN="#44CF6C"
+const RED="#E04831"
+const YELLOW="#FFCF56"
+
+const WHITE="#FFF"
+const BLACK="#000"
+const SNOW="#F2F2F2"
+const LGRAY="#BCBCBC"
+const MGRAY="#666666"
+const DGARY="#151515"
