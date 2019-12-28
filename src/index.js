@@ -79,6 +79,7 @@ class Form extends React.Component {
   }
 
   componentWillMount() {
+    const params = { mode: 'no-cors' }
     fetch('https://urbo-server.herokuapp.com/cities')
     .then(resp => resp.json())
     .then(cities => this.setState({ cities, city: cities[0] }))
