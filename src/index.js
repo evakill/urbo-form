@@ -17,9 +17,6 @@ const Page = s.div`
   @media (max-width:800px) {
     margin: 2rem 3rem;
   }
-  @media (max-width:1200px) {
-    margin: 6rem 10rem;
-  }
 `
 
 const Icon = s.span`
@@ -82,7 +79,7 @@ class Form extends React.Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:8000/cities')
+    fetch('https://urbo-server.herokuapp.com/cities')
     .then(resp => resp.json())
     .then(cities => this.setState({ cities, city: cities[0] }))
   }
@@ -114,7 +111,7 @@ class Form extends React.Component {
     if (!city || !name || !desc || !address || !instr) this.setState({valid: false})
     else {
       this.setState({ valid: true })
-      fetch('http://localhost:8000/dest/new', {
+      fetch('https://urbo-server.herokuapp.com/dest/new', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json; charset=utf-8",
